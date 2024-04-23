@@ -31,5 +31,4 @@ You can add a `-d` flag to silence the output in the terminal but otherwise that
 ## Upcoming Developments
 - Make file to automate the above. 
 - Implement Kubernetes for containers.
-- PHP CS runner on PSR 12 pre-commit hook.
 - API Key (Security update)
