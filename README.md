@@ -20,7 +20,7 @@ docker ps
 docker network ls
 ```
 
-After confirming all is running you can simply run the following to start the service, you will confirm this by seeing the `mysql` container and the network `database` after running above commands.
+After confirming all is running you can simply run the following to start the service, you will confirm this by seeing the `mysql` container and the network `jeeves` after running above commands.
 
 ```bash
 docker compose up
