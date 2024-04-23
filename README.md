@@ -10,7 +10,7 @@ Micro Service/Rest Api to handle event related requests
  docker network create \
   --driver=bridge \
   --attachable \
-   database
+   jeeves
    ```
 
 After you are sure this is running, which can also be confirmed with a 

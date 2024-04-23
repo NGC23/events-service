@@ -12,7 +12,7 @@ services:
     links:
       - event-service
     networks:
-      database: {}
+      jeeves: {}
 
   event-service:
     build:
@@ -23,8 +23,8 @@ services:
     volumes:
       - .:/app/
     networks:
-      database: {}
+      jeeves: {}
 
 networks:
-  database:
+  jeeves:
     external: true
