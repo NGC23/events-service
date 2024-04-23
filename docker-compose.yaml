@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  event-service-web:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app/
+    links:
+      - event-service
+    networks:
+      database: {}
+
+  event-service:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    environment:
+      XDEBUG_MODE: "develop,debug,coverage"    #only matters for dev enviorment and acceptance/testing
+    volumes:
+      - .:/app/
+    networks:
+      database: {}
+
+networks:
+  database:
+    external: true
