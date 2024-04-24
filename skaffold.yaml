@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta26
+kind: Config
+metadata:
+ name: phpfpm-nginx
+build:
+ artifacts:
+ - image: ngc23/events-service
+   docker:
+     dockerfile: Dockerfile
+deploy:
+ kubectl:
+   manifests:
+   - build/deployment.yaml

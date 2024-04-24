@@ -20,6 +20,7 @@ class EventController
 
     public function getAll(ServerRequestInterface $request): ResponseInterface
     {
+        die("sadasdasdas");
         $userId = (int) $request->getAttribute('userId');
         try {
             $events = $this->eventRepository->getAll($userId);
