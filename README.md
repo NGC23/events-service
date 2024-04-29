@@ -29,6 +29,6 @@ docker compose up
 You can add a `-d` flag to silence the output in the terminal but otherwise that is all that is required, then you sould be able to run the `docker ps` command from above and you should see the `event-service` container running.
 
 ## Upcoming Developments
-- Make file to automate the above. 
-- Implement Kubernetes for containers.
+- Make file to automate the above. (IN NEW BRANHC)
+- Implement Kubernetes for containers. (IN NEW BRANHC)
 - API Key (Security update)
