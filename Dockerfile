@@ -15,11 +15,11 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg && docker-php-ext-in
 RUN pecl install -o -f redis &&  rm -rf /tmp/pear \
     &&  docker-php-ext-enable redis
 
-COPY ./docker/php.ini /usr/local/etc/php/conf.d/
+COPY docker/php.ini /usr/local/etc/php/conf.d/
 
 # Apache
 RUN a2enmod rewrite
-COPY ./docker/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # Remove dev composer packages
 RUN composer install --optimize-autoloader --no-dev
