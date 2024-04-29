@@ -1,4 +1,4 @@
-# Event Service
+# Event Service (OUTDATED WITH KUBERNETES CHANGES NOW)
 
 Micro Service/Rest Api to handle event related requests
 
