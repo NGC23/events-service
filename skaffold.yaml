@@ -1,7 +1,7 @@
 apiVersion: skaffold/v2beta26
 kind: Config
 metadata:
- name: phpfpm-nginx
+ name: event-service
 build:
  artifacts:
  - image: ngc23/events-service
@@ -10,4 +10,4 @@ build:
 deploy:
  kubectl:
    manifests:
-   - build/deployment.yaml
+   - ./../deployments/dev/events-service/deployment.yaml

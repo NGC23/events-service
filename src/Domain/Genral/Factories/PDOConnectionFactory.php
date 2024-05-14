@@ -11,7 +11,6 @@ use PDOException;
 
 class PDOConnectionFactory implements IConnectionFactory
 {
-    //"mysql:host=mysql;port=3306;dbname=jeeves","root","secret"
     public function __construct(private Connection $connection)
     {
     }
